@@ -1,3 +1,3 @@
-# HTML5-Template
+# Final Project
 
-A basic HTML5/CSS3 Template for building a website off of.
+This is the repository for my WEB-210 class final project.
