@@ -13,14 +13,23 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
     display: block;
 }
 
-p, h1, h2, h3, h4, h5, h6, body, html, td, th, * {
+p:not(i), h1, h2, h3, h4, h5, h6, body:not(i), html, td, th, * {
     margin: 0;
     padding: 0;
     border: 0 none;
     color: #212121;
 }
 
-p{
+i {
+    width: auto;
+    text-indent: 0 !important;
+}
+
+i:last-child {
+    text-indent: 2%;
+}
+
+p:not(i){
     font-size:1.2em;
     line-height: 1.6em;
     text-indent: 5%;
@@ -69,100 +78,52 @@ body {
 img, audio, video {
     width: 100%;
 }
+/**************************** BUTTON BASE STYLES/Reset ***********************/
 
-/*.link {
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
     position: relative;
-    color: #2196F3;
-    text-decoration: none;
-    font-size: 1.2em;
-    -webkit-transition: color 0.1s ease-in-out 0.1s;
-    -moz-transition: color 0.1s ease-in-out 0.1s;
-    -ms-transition: color 0.1s ease-in-out 0.1s;
-    -o-transition: color 0.1s ease-in-out 0.1s;
-    transition: color 0.1s ease-in-out 0.1s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-.link:hover {
-    color: #0D47A1;
-}
-
-.link:before {
+.btn:after {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #0D47A1;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.2s ease-in-out 0s;
-    -moz-transition: all 0.2s ease-in-out 0s;
-    -ms-transition: all 0.2s ease-in-out 0s;
-    -o-transition: all 0.2s ease-in-out 0s;
-    transition: all 0.2s ease-in-out 0s;
-
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-.link:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    -moz-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    -o-transform: scaleX(1);
-    transform: scaleX(1);
-}*/
+/*************************************************/
 
 .inline-link {
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    -ms-transition: color 0.3s;
-    -o-transition: color 0.3s;
-    transition: color 0.3s;
+    text-decoration: none;
+    color: #000;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .inline-link:hover {
-    color: #000;
+    color: #fff;
 }
-
-.link {
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    transition: color 0.3s;
-}
-
-.link::before {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    color: transparent;
-    content: '•';
-    text-shadow: 0 0 transparent;
-    font-size: 1.2em;
-    -webkit-transition: text-shadow 0.3s, color 0.3s;
-    -moz-transition: text-shadow 0.3s, color 0.3s;
-    transition: text-shadow 0.3s, color 0.3s;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-    pointer-events: none;
-}
-
-.link:hover::before,
-.link:focus::before {
-    color: #795548;
-    text-shadow: 10px 0 #795548, -10px 0 #795548;
-}
-
-.link:hover,
-.link:focus {
-    color: #795548;
-}
-
 
 /******************************************* Main Wrappers ***********************************/
 
@@ -205,7 +166,7 @@ img, audio, video {
     /*font-size: 5em;*/
     /*text-align: left;*/
     background-color: black;
-    opacity: 0.7;
+    opacity: 0.5;
     z-index: -1;
     height: 100%;
     width: 100vw;
@@ -251,7 +212,7 @@ img, audio, video {
 }
 /*********************** NAVIGATIONS STUFF *******************/
 .nav-link:before, .nav-link:after {
-    display: inline-block;
+    display: inline-flex;
     opacity: 0;
     -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
     -moz-transition: -moz-transform 0.3s, opacity 0.2s;
@@ -276,7 +237,7 @@ img, audio, video {
     transform: translateX(-20px);
 }
 
-.nav-link, a {
+.nav-link > a {
     position: relative;
     text-decoration: none;
     -webkit-transition: all 0.3s linear 0.1s;
@@ -288,11 +249,13 @@ img, audio, video {
     margin-left: auto;
     margin-right: auto;
     /*display: inline-block;*/
-    font-size: 1.3em;
+    font-size: 1.5em;
+    color: white;
 }
 
-.nav-link:hover {
-    color: #d2d2d2;
+.nav-link a:hover,
+.nav-link {
+    color: #727272;
 }
 .nav-link:hover:before,
 .nav-link:hover:after,
@@ -303,61 +266,32 @@ img, audio, video {
     -moz-transform: translateX(0px);
     transform: translateX(0px);
 }
-
-.btn {
-    overflow: hidden;
-    border: none;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background: none;
-    cursor: pointer;
-    padding: 25px 80px;
-    display: inline-block;
-    margin: 15px 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    outline: none;
-    position: relative;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+/*----------------------------------------------*/
+.btn-1 {
+    border: 3px solid #000;
+    color: #000;
+    z-index: 5;
 }
 
-.btn:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+.btn-1:after {
     width: 100%;
     height: 0;
-    top: 50%;
-    left: 50%;
-    background: #fff;
-    opacity: 0;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    top: 0;
+    left: 0;
+    background: #F44336;
 }
 
-.btn:hover,
-.btn:active {
-    color: #4CAF50;
+.btn-1:hover,
+.btn-1:active {
+    color: #fff;
+    border: 3px dashed #fff;
 }
 
-.btn:hover:after {
-    height: 260%;
-    opacity: 1;
+.btn-1:hover:after,
+.btn-1:active:after {
+    height: 100%;
 }
 
-.btn:active:after {
-    height: 400%;
-    opacity: 1;
-}
 
 .fa-twitter {
     color: #4099FF;
@@ -379,6 +313,33 @@ img, audio, video {
 .btn-twitter:after{
     background: #4099FF;
     border: 1px dashed #4099FF;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.btn-twitter {
+    overflow: hidden;
+}
+
+.btn-twitter:hover,
+.btn-twitter:active {
+    color: #0e83cd;
+}
+
+.btn-twitter:hover:after {
+    height: 260%;
+    opacity: 1;
+}
+
+.btn-twitter:active:after {
+    height: 400%;
+    opacity: 1;
 }
 
 form {
@@ -409,7 +370,7 @@ label {
     overflow: hidden;
 }
 
-.instruction-grid .col p{
+.instruction-grid p{
     color: #dfdfdf;
 }
 
@@ -478,14 +439,23 @@ figure img.vert {
     height:15vh;
 }
 
+.divider {
+    height: 1vh;
+    background-color: transparent;
+}
+
+.invis.divider {
+    border: none;
+}
+
 /*************************************Color Pallete*********************************/
 .secondary.text{
     color: #727272;
 }
 
 .divider {
+    border-bottom: 1px solid;
     border-color: #b6b6b6;
-    height: 5vh;
 }
 
 .accent.bg {
