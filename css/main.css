@@ -65,7 +65,18 @@ p, body, html, td, th {
 pre, code {
     font-family: 'Inconsolata', sans-serif;
     font-size:1.2em;
-    line-height: 1.6em;
+    /*line-height: 1.6em;*/
+}
+
+code:before {
+    content: '';
+    background: #fff;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+code {
+    background: rgba(255, 255, 255, 0.8);
 }
 
 body {
@@ -161,6 +172,7 @@ img, audio, video {
     z-index: 0;
 }
 
+
 .wrapper-main:before {
     content: '';
     /*font-size: 5em;*/
@@ -209,6 +221,7 @@ img, audio, video {
     color: #fff;
     z-index: 5;
     max-width: 100vw;
+    width: 100%;
 }
 /*********************** NAVIGATIONS STUFF *******************/
 .nav-link:before, .nav-link:after {
@@ -245,12 +258,78 @@ img, audio, video {
     -ms-transition: all 0.3s linear 0.1s;
     -o-transition: all 0.3s linear 0.1s;
     transition: all 0.3s linear 0.1s;
-    width: 50vw;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     /*display: inline-block;*/
     font-size: 1.5em;
     color: white;
+}
+
+.inline-img {
+    shape-outside: border-box;
+}
+
+.fade-img {
+    opacity: 0.2;
+    -webkit-transition: all 0.3s linear 0.2s;
+    -moz-transition: all 0.3s linear 0.2s;
+    -ms-transition: all 0.3s linear 0.2s;
+    -o-transition: all 0.3s linear 0.2s;
+    transition: all 0.3s linear 0.2s;
+}
+
+.fade-img:hover {
+    -webkit-transform: translateX(-100px) scale(1.2);
+    -moz-transform: translateX(-100px) scale(1.2);
+    -ms-transform: translateX(-100px) scale(1.2);
+    -o-transform: translateX(-100px) scale(1.2);
+    transform: translateX(-100px) scale(1.2);
+    opacity: 1;
+}
+
+.thumb {
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+
+.thumb:hover {
+    transform: scaleX(1.5) scaleY(1.5) translateY(-100px);
+    overflow: visible;
+}
+.thumb1 {
+    transition: all 0.1s ease-in;
+}
+.thumb1:hover {
+    transform: scale(2);
+}
+
+.zoom {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.zoom:hover {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+}
+
+.zoom.left:hover {
+    -webkit-transform: translateX(-200px) scaleX(1.5) scaleY(1.5);
+    -moz-transform: translateX(-200px) scaleX(1.5) scaleY(1.5);
+    -ms-transform: translateX(-200px) scaleX(1.5) scaleY(1.5);
+    -o-transform: translateX(-200px) scaleX(1.5) scaleY(1.5);
+    transform: translateX(-200px) scaleX(1.5) scaleY(1.5);
+    overflow: visible;
+    z-index: 100;
 }
 
 .nav-link a:hover,
@@ -292,6 +371,71 @@ img, audio, video {
     height: 100%;
 }
 
+.btn-2 {
+    overflow: hidden;
+    border: 2px solid #dfdfdf;
+}
+
+.btn-2:after {
+    width: 101%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.btn-2:hover,
+.btn-2:active {
+    color: #4CAF50;
+}
+
+.btn-2:hover:after {
+    height: 75%;
+    opacity: 1;
+}
+
+.btn-2:active:after {
+    height: 130%;
+    opacity: 1;
+}
+
+.btn-3 {
+    overflow: hidden;
+    border: 3px solid #dfdfdf;
+}
+
+.btn-3:after {
+    width: 0;
+    height: 103%;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.btn-3:hover,
+.btn-3:active {
+    color: #0e83cd;
+}
+
+.btn-3:hover:after {
+    width: 90%;
+    opacity: 1;
+}
+
+.btn-3:active:after {
+    width: 101%;
+    opacity: 1;
+}
 
 .fa-twitter {
     color: #4099FF;
@@ -375,14 +519,16 @@ label {
 }
 
 .col {
-    flex: 1;
+    flex: 1 1 0;
     padding: 12px;
+    width: auto;
 }
 
 .col img {
-    position: relative;
+    /*position: relative;*/
     margin-right: auto;
     margin-left: auto;
+    flex-basis: 150%;
 }
 
 /***************** IRRELEVANT FIGURE STYLES *********************/
@@ -425,6 +571,8 @@ figure img.vert {
     padding: 2% 2% 2% 10%;
     width: 45%;
 }
+
+
 /******** FLOAT RIGHT (i guess?) **********/
 .right {
     position: absolute;
@@ -451,6 +599,10 @@ figure img.vert {
 /*************************************Color Pallete*********************************/
 .secondary.text{
     color: #727272;
+}
+
+.light.gray.text {
+    color: lightgray;
 }
 
 .divider {

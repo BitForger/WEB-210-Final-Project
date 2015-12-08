@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Building a Block - Minecraft Guidebook</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="wrapper-nav">
+			<div class="grid">
+				<div class="col nav-link"><a href="index.html" class="primary text">Minecraft Guidebook</a></div>
+				<!-- /.col nav-link -->
+				<div class="col nav-link"><a href="basicsgameplay.html" class="primary text">Minecraft Game Basics</a></div>
+				<!-- /.col -->
+				<div class="col nav-link"><a href="advancedgameplay.html" class="primary text">Advanced Gameplay</a></div>
+				<!-- /.col -->
+				<div class="col nav-link"><a href="moddingBasics.html" class="primary text">Modding How-To Introduction</a></div>
+				<!-- /.col -->
+			</div>
+			<!-- /.grid -->
+		</div>
+		<!-- /.nav-wrapper --
+		<!--========================================================-->
+
+		<div class="dark orange bg wrapper">
+			<div class="grid">
+				<div class="col">
+					<p>Next up, making a block. Right click on the examplemod folder and click on the ‘New Java Class’ in the New menu at the top. Name it myBlock and click OK. It should turn out a basic Java class file with</p>
+					<code>public class myBlock {</code><p>Between the curly brace and the name of the class type</p>
+					<code>extends Block</code><p>Now Intellij should ask to import some classes, which definitely needs to be done. Make sure to choose the class</p>
+					<code>net.minecraft.block.Block</code><p>as that will give the ability to create a new block. The block class is comprised of the class, the actual block, and any functions that add additional functions to the block. So now that the basics are setup, let’s edit the block part. Inside the parenthesis (if it’s not already there) add</p>
+					<code>Material material</code><p>That part makes sure it is passed a material to the block so Minecraft knows how to treat the block in the game. Now to initialize the block. That can be achieved with the</p>
+					<code>super()</code><p>method. Because the block receives the parameter <code>material</code> it must initialize the block with that parameter.</p>
+				</div>
+				<!-- /.col -->
+				<div class="col">
+					<img src="img/Block.png" alt="Block" class="">
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.grid -->
+			<div class="grid">
+				<div class="col">
+					<p>That is an image taken from a personal mod that uses a lot of the available modifiers for a block. This is just a simple block, keep in mind that there are so many more possibilities that haven’t been showcased. The creative tab, step sound, hardness, resistance, and harvest level are all used. The
+						<code>getItemDropped</code> function at the bottom is used to change the item that is dropped when the block is destroyed.
+					</p>
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.grid -->
+		</div>
+		<!-- /.dark orange bg -->
+		<div class="wrapper-footer">
+			<div class="grid">
+				<div class="col">
+					<p>Was this guide helpful? Let me know!</p>
+					<a href="https://www.twitter.com/kaminocoding"><div class="btn btn-twitter"><i class="fa fa-twitter"></i></div>
+						<!-- /.btn --></a>
+				</div>
+				<!-- /.col -->
+				<div class="col">
+					<p>Share this page!</p>
+					<div class="invis divider"></div>
+					<!-- /.divider -->
+					<a class="twitter-share-button"
+					   href="https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20resource%20for%20Minecraft%21"
+					   data-size="large">
+						Tweet</a>
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.grid -->
+		</div>
+		<!-- /.wrapper-footer -->
+	</div>
+	<!-- /#container -->
+
+	<script>window.twttr = (function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0],
+				t = window.twttr || {};
+		if (d.getElementById(id)) return t;
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "https://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js, fjs);
+
+		t._e = [];
+		t.ready = function(f) {
+			t._e.push(f);
+		};
+
+		return t;
+	}(document, "script", "twitter-wjs"));</script>
+</body>
+</html>
