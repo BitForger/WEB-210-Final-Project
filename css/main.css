@@ -32,7 +32,6 @@ i:last-child {
 p:not(i){
     font-size:1.2em;
     line-height: 1.6em;
-    text-indent: 5%;
 }
 
 h1 {
@@ -60,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, body, html, td, th {
     font-family: 'Didact Gothic', sans-serif;
+    text-align: left;
 }
 
 pre, code {
@@ -201,6 +201,10 @@ img, audio, video {
     font-size: 1.2em;
 }
 
+.wrapper-footer p {
+    text-align: center;
+}
+
 .wrapper.accent.bg {
     z-index: 1;
 }
@@ -328,6 +332,16 @@ img, audio, video {
     -ms-transform: translateX(-200px) scaleX(1.5) scaleY(1.5);
     -o-transform: translateX(-200px) scaleX(1.5) scaleY(1.5);
     transform: translateX(-200px) scaleX(1.5) scaleY(1.5);
+    overflow: visible;
+    z-index: 100;
+}
+
+.zoom.right:hover {
+    -webkit-transform: translateX(200px) scaleX(1.5) scaleY(1.5);
+    -moz-transform: translateX(200px) scaleX(1.5) scaleY(1.5);
+    -ms-transform: translateX(200px) scaleX(1.5) scaleY(1.5);
+    -o-transform: translateX(200px) scaleX(1.5) scaleY(1.5);
+    transform: translateX(200px) scaleX(1.5) scaleY(1.5);
     overflow: visible;
     z-index: 100;
 }
@@ -505,6 +519,7 @@ label {
     display: -webkit-flex;
     max-width: 100vw;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .instruction-grid {
@@ -528,7 +543,6 @@ label {
     /*position: relative;*/
     margin-right: auto;
     margin-left: auto;
-    flex-basis: 150%;
 }
 
 /***************** IRRELEVANT FIGURE STYLES *********************/
@@ -680,6 +694,13 @@ figure img.vert {
 .orange.text {
     color: #FF5722;
 }
+
+.grey.bg {
+    background: #b6b6b6;
+}
+/*================================================================*/
+/*----------------Youtube Video Responsive Loading ---------------*/
+/*================================================================*/
 
 
 /**************************************TABLET*********************************/
