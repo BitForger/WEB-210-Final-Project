@@ -148,7 +148,17 @@ img, audio, video {
     transition: all 0.2s ease-in;
 }
 
-.inline-link:hover {
+.inline-link i {
+    color: #000;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.inline-link:hover,
+.inline-link i:hover{
     color: #999;
 }
 
@@ -788,7 +798,8 @@ td {
     background: #b6b6b6;
 }
 
-.inline-link[class*=inverted] {
+.inline-link[class*=inverted],
+.inline-link[class*=inverted] i {
     color: #fff;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
@@ -796,7 +807,8 @@ td {
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
-.inline-link[class*=inverted]:hover {
+.inline-link[class*=inverted]:hover,
+.inline-link[class*=inverted] i:hover {
     color: #000;
 }
 
