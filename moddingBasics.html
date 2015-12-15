@@ -15,106 +15,76 @@
 			<div class="grid">
 				<div class="col nav-link"><a href="index.html" class="primary text">Minecraft Guidebook</a></div>
 				<!-- /.col nav-link -->
-				<div class="col nav-link"><a href="basicsgameplay.html" class="primary text">Minecraft Game Basics</a></div>
+				<div class="col nav-link" ><a href="basicsgameplay.html" class="primary text">Minecraft Game Basics</a></div>
 				<!-- /.col -->
-				<div class="col nav-link"><a href="advancedgameplay.html" class="primary text">Advanced Gameplay</a></div>
+				<div class="col nav-link" ><a href="advancedgameplay.html" class="primary text">Advanced Gameplay</a></div>
 				<!-- /.col -->
-				<div class="col nav-link"><a href="moddingBasics.html" class="primary text">Modding How-To Introduction</a></div>
+				<div class="col nav-link" ><a href="moddingBasics.html" class="primary text">Modding How-To Introduction</a></div>
 				<!-- /.col -->
 			</div>
 			<!-- /.grid -->
 		</div>
 		<!-- /.nav-wrapper -->
 
-		<div class="wrapper dark blue bg">
-			<div class="grid">
-				<div class="col">
-					<p class="light gray text">The Minecraft modding community is perhaps one of the largest game modding communities in the world. They are extremely helpful to those who don’t know much about modding so if any help is needed, don’t hesitate to go to
-						<a href="http://minecraftforge.net/forums" class="inline-link">minecraftforge.net/forums</a>. Keep in mind that the task of developing a mod is not for those new to computers and programming. With that being said, it is time to start work on this modification.
-					</p>
+		<div class="wrapper dark blue bg" style="padding-top: 50px; padding-bottom: 50px;">
+			<div class="content">
+				<p class="">The Minecraft modding community is perhaps one of the largest game modding communities in the world. They are extremely helpful to those who don’t know much about modding so if any help is needed, don’t hesitate to go to
+					<a href="http://minecraftforge.net/forums" class="inline-link">minecraftforge.net/forums</a>. Keep in mind that the task of developing a mod is not for those new to computers and programming. With that being said, it is time to start work on this modification.
+				</p>
+
+				<p class="">First, if the Java JDK 1.6 is not installed, grab the download from here: <a href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html#jdk-6u45-oth-JPR" class="inline-link">Oracle Java JDK 6</a>. Go ahead and run the installer for the current operating system that is going to be used for writing the code. Next up, install the IDE. There are a bunch of different Java Integrated Development Environments(IDEs) out there but a favorite of many modders is JetBrains’ Intellij IDEA. The community edition of Intellij IDEA will suffice for the purpose of developing mods; it can be downloaded from
+					<a href="https://www.jetbrains.com/idea/download" class="inline-link">Jetbrains Intellij IDEA</a>. Almost done with the downloads, just go to
+					<a href="http://files.minecraftforge.net" class="inline-link">http://files.minecraftforge.net</a> and download the recommended MDK version from the red box on the middle right.</p>
+
+				<div class="divider"></div>
+				<!-- /.divider -->
+				<p class="">Still here? Great! Up next, time to setup this workspace. Go ahead and go to the desktop or wherever is wanted to keep the modding folder. It is best practice to create a folder called ‘Modding’ to keep all of the modding projects organized in but that is optional. If a modding folder is created, extract the zip file into a folder inside the ‘Modding’ folder. Otherwise, just extract it to the folder that is wanted to store the files.</p>
+				<figure>
+					<img src="img/finder-forge.png" alt="" class="horiz">
+				</figure>
+				<p class="">Now the MDK folder needs to be renamed to the name of the mod that is going to be made. Once that has been done, open up Intellij and go through the setup prompts if not already done. When it gets to the project window click on “Import Project” then navigate to where the MDK is.</p>
+				<p class="">Select the build.gradle file and import the project from that. It will run through a couple of prompt windows all of which ‘OK’ can be selected. The IDE is now setting up the basic workspace for your mod.</p>
+
+				<div class="pics">
+					<img id="zoom" src="img/intellij-import.png" alt="Importing intellij" class="zoom img1" style="">
+					<img src="img/intellij-select.png" alt="Selecting intellij" class="vert img1" style="">
 				</div>
-				<!-- /.col -->
-				<div class="col">
-					<p class="light gray text">First, if the Java JDK 1.6 is not installed, grab the download from here: <a
-							href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html#jdk-6u45-oth-JPR" class="inline-link">Oracle Java JDK 6</a>. Go ahead and run the installer for the current operating system that is going to be used for writing the code. Next up, install the IDE. There are a bunch of different Java Integrated Development Environments(IDEs) out there but a favorite of many modders is JetBrains’ Intellij IDEA. The community edition of Intellij IDEA will suffice for the purpose of developing mods; it can be downloaded from
-						<a href="https://www.jetbrains.com/idea/download" class="inline-link">Jetbrains Intellij IDEA</a>. Almost done with the downloads, just go to
-						<a href="http://files.minecraftforge.net" class="inline-link">http://files.minecraftforge.net</a> and download the recommended MDK version from the red box on the middle right.</p>
-				</div>
-				<!-- /.col -->
+				<!-- /.pics -->
+
 			</div>
-			<div class="grid">
-				<div class="col">
-					<div class="divider"></div>
-					<!-- /.divider -->
-					<p class="light gray text">Still here? Great! Up next, time to setup this workspace. Go ahead and go to the desktop or wherever is wanted to keep the modding folder. It is best practice to create a folder called ‘Modding’ to keep all of the modding projects organized in but that is optional. If a modding folder is created, extract the zip file into a folder inside the ‘Modding’ folder. Otherwise, just extract it to the folder that is wanted to store the files.</p>
-					<img src="img/finder-forge.png" alt="">
-					<!-- /.divider -->
-				</div>
-				<!-- /.col -->
-				<div class="col">
-					<div class="divider"></div>
-					<p class="light gray text">Now the MDK folder needs to be renamed to the name of the mod that is going to be made. Once that has been done, open up Intellij and go through the setup prompts if not already done. When it gets to the project window click on “Import Project” then navigate to where the MDK is.</p>
-					<p class="light gray text">Select the build.gradle file and import the project from that. It will run through a couple of prompt windows all of which ‘OK’ can be selected. The IDE is now setting up the basic workspace for your mod.</p>
-					<div class="grid">
-						<div class="col">
-							<img src="img/intellij-import.png" alt="Importing intellij" class="thumb1">
-						</div>
-						<!-- /.col -->
-						<div class="col">
-							<img src="img/intellij-select.png" alt="Selecting intellij" class="thumb">
-						</div>
-						<!-- /.col -->
-					</div>
-					<!-- /.grid -->
-				</div>
-				<!-- /.col -->
-			</div>
-			<!-- /.grid -->
+			<!-- /.content -->
 		</div>
-		<div class="dark primary bg">
-			<div class="grid">
-			<div class="col">
+		<!-- /.col -->
+		<div class="dark primary bg" style="padding: 50px 0;">
+			<div class="content">
 				<p>If problems are encountered while setting up with the IDE then open a terminal window and type</p>
 				<pre><code>cd ~/&lt;path-to-MDK-folder&gt; </code></pre>
-				<img src="img/term-setup.png" alt="">
-			</div>
-			<!-- /.col -->
-			<div class="col">
-				<img src="img/terminal-gradlew.png" alt="">
 				<p>and hit enter. Next type</p>
+				<img src="img/term-setup.png" alt="" style="width:50%; height: auto; float: left;">
+
+				<img src="img/terminal-gradlew.png" alt="" style="width: 50%; height: auto;">
+
 				<pre><code>bash gradlew setupDecompWorkspace idea</code></pre>
 
 				<p>This does what the IDE does from the command line. If command line option is the chosen method of setup, when you import the project just use the .ipr file generated in the folder instead of build.gradle. </p>
 			</div>
-			<!-- /.col -->
-		</div>
-			<!-- /.grid -->
+			<!-- /.content -->
 		</div>
 		<!-- /.dark primary bg -->
 
 		<!-- /.dark blue bg wrapper -->
-		<div class="orange bg wrapper">
-			<div class="grid">
-				<div class="col">
-					<p>Congratulations, that crazy setup process is done. Things are just going to get worse from here on. Just kidding! In the sidebar there should be a list of folders with the mod’s name and dropdown revealing all sorts of other folders. It should be open down through “com.exapmle.examplemod” or “com/example/examplemod”. The names of those folders are package names. The industry standard format is</p>
-					<pre><code>&lt;website tld(com, org, io)&gt;.&lt;domain or company name&gt;.&lt;package or mod name&gt;</code></pre>
-				</div>
+		<div class="orange bg wrapper" style="padding: 50px 0;">
+			<div class="content">
+				<p>Congratulations, that crazy setup process is done. Things are just going to get worse from here on. Just kidding! In the sidebar there should be a list of folders with the mod’s name and dropdown revealing all sorts of other folders. It should be open down through “com.exapmle.examplemod” or “com/example/examplemod”. The names of those folders are package names. The industry standard format is</p>
+				<pre><code>&lt;website tld(com, org, io)&gt;.&lt;domain or company name&gt;.&lt;package or mod name&gt;</code></pre>
 
-				<div class="col">
-					<p>This format is used for the interpreter to figure out where the code is from and how it is organized. There should be a file called examplemod.java. Double-click that file and open it in the IDE. There is should be a bunch of gibberish if Java isn’t common knowledge. That’s okay though. Pretty much everything that the mod needs to run will be declared in this one file. Here is a diagram of the file:
-					</p>
-				</div>
-				<!-- /.col -->
+				<p>This format is used for the interpreter to figure out where the code is from and how it is organized. There should be a file called examplemod.java. Double-click that file and open it in the IDE. There is should be a bunch of gibberish if Java isn’t common knowledge. That’s okay though. Pretty much everything that the mod needs to run will be declared in this one file. Here is a diagram of the file:
+				</p>
+				<img src="img/ExampleMod.png" alt="Example Mod File" class="inline-img">
 			</div>
-			<!-- /.grid -->
-			<div class="grid">
-				<div class="col">
-					<img src="img/ExampleMod.png" alt="Example Mod File" class="inline-img">
-				</div>
-				<!-- /.col -->
 			</div>
-			<!-- /.grid -->
-		</div>
+			<!-- /.content -->
+
 		<!-- /.orange bg wrapper -->
 		<div class="accent bg wrapper">
 			<div class="grid">
@@ -176,5 +146,6 @@
 
 		return t;
 	}(document, "script", "twitter-wjs"));</script>
+	<script src="js/main.js"></script>
 </body>
 </html>
