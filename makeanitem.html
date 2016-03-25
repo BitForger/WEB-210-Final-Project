@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Code an Item - Minecraft Guidebook</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+
+	<style type="text/css">
+		#container:before {
+			background-image: url(img/Minecraft_1.jpg);
+			content: '';
+			position: fixed;
+			background-repeat: no-repeat;
+			height: 100vh;
+			width: 100vw;
+			background-position: center center;
+			z-index: -1;
+			display: block;
+		}
+		#container {
+			z-index: 1;
+		}
+
+		.fade {
+			background-color: #fff;
+			opacity:0.4;
+			background-position: center center;
+			transition: all 0.2s linear;
+
+		}
+		.fade:hover,
+		.fade:hover > p{
+			opacity: 1;
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="wrapper-nav">
+			<div class="grid">
+				<div class="col nav-link"><a href="index.html" class="primary text">Minecraft Guidebook</a></div>
+				<!-- /.col nav-link -->
+				<div class="col nav-link"><a href="basicsgameplay.html" class="primary text">Minecraft Game Basics</a></div>
+				<!-- /.col -->
+				<div class="col nav-link"><a href="advancedgameplay.html" class="primary text">Advanced Gameplay</a></div>
+				<!-- /.col -->
+				<div class="col nav-link"><a href="moddingBasics.html" class="primary text">Modding How-To Introduction</a></div>
+				<!-- /.col -->
+			</div>
+			<!-- /.grid -->
+		</div>
+		<!-- /.nav-wrapper -->
+		<div class="big-divider"></div>
+		<div class="big-divider"></div>
+		<!-- /.big-divider -->
+		<div class="wrapper">
+			<div class="grid">
+				<div class="col fade">
+					<p class="">Items are programmed in a similar way to blocks. Go ahead and make a new class called myItem and add </p>
+					<code>extends Item</code> <p class="">to the same place as with the block. Below is a very basic item that doesn’t do anything. It initializes with no parameters since none are given, sets the name, sets the texture, and sets the creative tab it should be seen in. Those are the very basics of an item class. Most items actually look similar to this if they are just truly items. There are ItemTools and ItemBuckets that can be made which are much more complex and harder to make.</p>
+				</div>
+				<!-- /.col -->
+				<div class="col">
+					<img src="img/ItemCobaltIngot.png" alt="Item" class="fade-img">
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.grid -->
+		</div>
+		<!-- /.dark blue bg wrapper -->
+
+		<div class="wrapper" style="position: fixed; bottom: 0;">
+			<div class="grid">
+				<div class="col">
+					<p class="light text">Was this guide helpful? Let me know!</p>
+					<a href="https://www.twitter.com/kaminocoding"><div class="btn btn-twitter"><i class="fa fa-twitter"></i></div>
+						<!-- /.btn --></a>
+				</div>
+				<!-- /.col -->
+				<div class="col">
+					<p class="light text">Share this page!</p>
+					<div class="invis divider"></div>
+					<!-- /.divider -->
+					<a class="twitter-share-button"
+					   href="https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20resource%20for%20Minecraft%21"
+					   data-size="large">
+						Tweet</a>
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.grid -->
+		</div>
+		<!-- /.wrapper-footer -->
+	</div>
+	<!-- /#container -->
+<script>window.twttr = (function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0],
+			t = window.twttr || {};
+	if (d.getElementById(id)) return t;
+	js = d.createElement(s);
+	js.id = id;
+	js.src = "https://platform.twitter.com/widgets.js";
+	fjs.parentNode.insertBefore(js, fjs);
+
+	t._e = [];
+	t.ready = function(f) {
+		t._e.push(f);
+	};
+
+	return t;
+}(document, "script", "twitter-wjs"));</script>
+</body>
+</html>
